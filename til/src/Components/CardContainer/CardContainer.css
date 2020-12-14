@@ -1,0 +1,45 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.left-side {
+  grid-column: 1/2;
+  background-color: rgb(250, 245, 201);
+}
+.feed {
+  grid-column: 2/3;
+  background-color: rgb(201, 250, 209);
+}
+
+legend {
+  font-size: 1rem;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  height: 50px;
+  border: 1px solid grey;
+}
+
+label {
+  margin: 30px 0px 5px 0px;
+}
+
+button,
+input[type='submit'] {
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  border: none;
+  margin: 20px auto;
+}
+p.login {
+  text-align: center;
+}
