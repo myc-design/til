@@ -1,4 +1,7 @@
 import React from 'react';
+import {MdFace} from 'react-icons/md';
+import {MdInsertEmoticon} from 'react-icons/md';
+import {MdSentimentVerySatisfied} from 'react-icons/md';
 import './Navigation.css';
 // import styled from 'styled-components';
 
@@ -13,8 +16,18 @@ function NavigationBar() {
     <>
       <div className="nav-container">
         <h3>All My Learning</h3>
-        <a href="/post">Post</a>
-        <a href="/followers">Followers</a>
+        <div className="icon">
+          <MdFace />
+          <a href="/post">Recent Post</a>
+        </div>
+        <div className="icon">
+          <MdSentimentVerySatisfied />
+          <a href="/post">All Posts</a>
+        </div>
+        <div className="icon">
+          <MdInsertEmoticon />
+          <a href="/followers">Followers</a>
+        </div>
       </div>
     </>
   );
