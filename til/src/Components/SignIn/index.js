@@ -15,6 +15,12 @@ const Form = () => {
   const onSubmit = e => {
     e.preventDefault();
     const isValid = validateForm();
+    // Once we have input name and password, create jwt token
+    // Hash password using Bcrypt
+    // Create a user based on user schema - username, email and hashed password keys and a time stamp (created at).
+    // Connect to db - (create mongoose connection)
+    // Insert into db using insert function
+    // Send user to login page
   };
 
   const validateForm = () => {
@@ -23,7 +29,7 @@ const Form = () => {
     let passwordError = {};
     let isValid = true;
 
-    //requiremnet - make username unique
+    //requirement - make username unique
     //need to check if username is in database already
 
     if (name.length < 3) {
