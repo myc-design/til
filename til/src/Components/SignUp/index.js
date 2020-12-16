@@ -1,18 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './SignIn.css';
-import Button from '../../Components/Button';
 
-const Form = () => {
-  // useEffect(() => {
-  //   fetch('http://localhost:3001/')
-  //     .then(response => response.json())
-  //     .then(data => console.log(data));
-  // });
+const SignUp = () => {
   //set state
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [profile, setProfile] = useState('optional');
 
   //create error object
   const [nameError, setNameError] = useState({});
@@ -21,38 +14,7 @@ const Form = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-
-    // const isValid = validateForm();
-    if (true) {
-      //what do we do here?!!!
-      //server tells us it's ok to go to profile pageb
-      fetch('http://localhost:3001/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        //form data being sent
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-          profile: profile,
-        }),
-      })
-        .then(response => {})
-        .then();
-
-      console.log(name, email, password, profile);
-      setName('');
-      setEmail('');
-      setPassword('');
-      setProfile('');
-    }
-
-    //response object contains the data
-    //send this
-    //send response.body. (header stuff)
-
+    const isValid = validateForm();
     // Once we have input name and password, create jwt token
     // Hash password using Bcrypt
     // Create a user based on user schema - username, email and hashed password keys and a time stamp (created at).
@@ -76,9 +38,14 @@ const Form = () => {
       isValid = false;
     }
 
-    const emailCheck = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
-    if (!email.match(emailCheck)) {
-      emailError.invalid = 'Please enter a valid email';
+    const emailCheck = new RegExp(
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    );
+
+    if (email === emailCheck) {
+      
+     emailError.invalid = 'Please enter a valid email';
+
       isValid = false;
     }
 
@@ -164,18 +131,17 @@ const Form = () => {
 
               <label>Write a User Profile</label>
               <textarea
-                maxLength="500"
                 id="profile"
                 class="input-field"
                 type="password"
                 name="password"
                 rows="20"
-                cols="50"
-                value={profile}
-                onChange={e => {
-                  setProfile(e.target.value);
-                }}></textarea>
-              <Button />
+                cols="50"></textarea>
+              <input
+                type="submit"
+                name="submit"
+                value="Sign Up"
+              />
             </div>
           </fieldset>
         </form>
@@ -184,4 +150,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default SignUp;
