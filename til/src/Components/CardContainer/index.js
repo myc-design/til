@@ -1,9 +1,11 @@
 import React from 'react';
 import './CardContainer.css';
+import Navigation from '../../Components/Navigation';
 
 function CardContainer() {
   return (
     <div>
+      <Navigation />
       <div className="card-container">
         <div class="left-side">
           <div class="posts">

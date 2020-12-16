@@ -9,9 +9,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  /* transform: rotate(-5deg); */
   text-align: center;
-  /* background-color: rgb(252, 200, 210); */
   margin: 20px;
 }
 
@@ -19,7 +17,6 @@ h1.message {
   font-family: 'Courier New', Courier, monospace;
   color: white;
   font-size: 3rem;
-  background-color: navy;
   transform: rotate(0deg);
 }
 
@@ -51,7 +48,7 @@ a {
   padding: 5px;
 }
 
-a:after {
+a.animated:after {
   background: none repeat scroll 0 0 transparent;
   top: 25px;
   content: '';
@@ -66,8 +63,8 @@ a:after {
 }
 
 a:hover:after {
-  width: 100%;
-  left: 0%;
+  width: 110%;
+  left: -20%;
 }
 
 .form-wrapper {

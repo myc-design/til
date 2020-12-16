@@ -13,7 +13,7 @@ function App() {
         <Header />
         {/* <SignIn /> */}
         {/* <LogInForm /> */}
-        {/* <Navigation /> */}
+        <Navigation />
         {/* <CardContainer /> */}
       </header>
     </div>
