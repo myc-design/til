@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './SignIn.css';
 import Button from '../../Components/Button';
 
@@ -38,9 +38,9 @@ const Form = () => {
           password: password,
           profile: profile,
         }),
-      })
-        .then(response => {})
-        .then();
+      });
+      // .then(response => {})
+      // .then();
 
       console.log(name, email, password, profile);
       setName('');
