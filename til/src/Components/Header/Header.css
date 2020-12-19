@@ -1,3 +1,10 @@
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 body {
   margin: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -35,12 +42,12 @@ nav {
   justify-content: space-between;
   top: 0;
   padding-top: 18px;
-  height: 30px;
+  height: 180px;
   font-weight: bold;
 }
 
 a {
-  color: black;
+  color: white;
   font-size: 1.2rem;
   text-decoration: none;
   position: relative;
@@ -50,21 +57,23 @@ a {
 
 a.animated:after {
   background: none repeat scroll 0 0 transparent;
-  top: 25px;
+  top: 38px;
   content: '';
   display: block;
-  height: 20px;
+  height: 5px;
   left: 50%;
   position: absolute;
-  background: navy;
+  border-radius: 5px;
+  background: ivory;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 a:hover:after {
-  width: 110%;
+  width: 130%;
   left: -20%;
+  color: red;
 }
 
 .form-wrapper {
@@ -104,4 +113,8 @@ input[type='submit'] {
 }
 p.login {
   text-align: center;
+}
+
+.nav-container a {
+  color: black;
 }

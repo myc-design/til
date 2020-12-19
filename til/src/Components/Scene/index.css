@@ -1,0 +1,31 @@
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: lightpink;
+  position: relative; */
+}
+
+h2 {
+  font-family: 'Markazi Text', serif;
+  position: absolute;
+  top: 0px;
+  right: -200px;
+  color: lightpink;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 100;
+  letter-spacing: 0.4em;
+  text-align: center;
+  z-index: 10;
+  /* padding: 20px; */
+  text-transform: uppercase;
+  text-shadow: seagreen;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}

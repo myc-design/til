@@ -7,6 +7,7 @@ function App() {
       {/* <Scene /> */}
       <div className="App">
         <header className="App-header">
+      
           <Header />
           {/* <SignIn /> */}
           {/* <LogInForm /> */}

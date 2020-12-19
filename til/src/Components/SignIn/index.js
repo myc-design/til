@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './SignIn.css';
 import Button from '../../Components/Button';
 import {Redirect} from 'react-router-dom';
+import Scene from '../../Components/Scene';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -36,6 +37,7 @@ const Form = () => {
       })
         .then(response => response.json())
         .then(response => {
+          console.log(response);
           setUserRegister(true);
         });
 

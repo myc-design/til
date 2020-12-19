@@ -3,6 +3,7 @@ import {MdFace} from 'react-icons/md';
 import {MdInsertEmoticon} from 'react-icons/md';
 import {MdSentimentVerySatisfied} from 'react-icons/md';
 import './Navigation.css';
+import Scene from '../Scene';
 // import styled from 'styled-components';
 
 // const NavFlex = styled.div`
@@ -14,7 +15,9 @@ import './Navigation.css';
 function NavigationBar() {
   return (
     <>
+   
       <div className="nav-container">
+    
         <h3>All My Learning</h3>
         <div className="icon">
           <MdFace />

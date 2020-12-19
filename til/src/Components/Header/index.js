@@ -7,6 +7,7 @@ import Form from '../../Components/SignIn';
 import Login from '../../Components/Login';
 import CardContainer from '../../Components/CardContainer';
 import './Header.css';
+import Scene from '../../Components/Scene';
 import {
   Route,
   Link,
@@ -18,6 +19,7 @@ import LogInForm from '../Login';
 function Header() {
   return (
     <>
+  <Scene/>
       <Router>
         <nav>
           <Link to="/">
